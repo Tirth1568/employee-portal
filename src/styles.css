@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+.container {
+    padding: 20px;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  
+  .mat-checkbox-layout {
+    display: inline !important;
+  }
+  
+  .label-header {
+    height: 13px;
+  }
+  
+  .box {
+    position: relative;
+  }
+  
+  .box-tip-shown .box-tips {
+    right: -20%;
+    margin-right:-20px;
+    padding-right: 0;
+  }

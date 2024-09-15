@@ -1,0 +1,69 @@
+<form [formGroup]="form" role="form" *ngIf="isLoadForm">
+    <!-- First Name -->
+    <div class="my-3">
+        <label for="firstName" class="form-label">First Name<small class="p-error">*</small></label>
+        <input type="text" class="form-control" formControlName="firstName" placeholder="Enter First Name">
+        <small class="p-error" *ngIf="form.controls['firstName'].touched &&
+              (form.controls['firstName'].errors?.required)">
+            The first name is required.
+        </small>
+        <small class="p-error" *ngIf="form.controls['firstName'].touched &&
+              (form.controls['firstName'].errors?.pattern)">
+            The first name should be alphabet.
+        </small>
+    </div>
+
+
+    <!-- Surname -->
+    <div class="my-3">
+        <label for="lastName" class="form-label">Last Name <small class="p-error">*</small></label>
+        <input type="text" class="form-control" formControlName="lastName" placeholder="Enter Lastname">
+        <small class="p-error" *ngIf="form.controls['lastName'].touched &&
+              form.controls['lastName'].errors?.required">
+            The lastname is required.
+        </small>
+        <small class="p-error" *ngIf="form.controls['lastName'].touched &&
+              form.controls['lastName'].errors?.pattern">
+            The last name should be alphabet.
+        </small>
+    </div>
+    <div class="my-3">
+        <label for="email" class="form-label">Email <small class="p-error">*</small></label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter Email">
+        <small class="p-error" *ngIf="form.controls['email'].touched &&
+              form.controls['email'].errors?.required">
+            The surname is required.
+        </small>
+        <small class="p-error" *ngIf="form.controls['email'].touched &&
+              form.controls['email'].errors?.email">
+            Enter Valid email.
+        </small>
+    </div>
+    <div class="my-3">
+        <label for="birthDate" class="form-label ">BirthDate <small class="p-error">*</small></label>
+        <p-calendar appendTo="body" formControlName="birthDate" dateFormat="dd/mm/yy" [minDate]="minDate"
+            [maxDate]="maxDate" [showIcon]="true" />
+    </div>
+
+    <div class="my-3">
+        <label for="departmentId" class="form-label">Department<small class="p-error">*</small></label>
+
+        <p-dropdown [options]="departments" formControlName="departmentId" optionLabel="name" optionValue="id"
+            placeholder="Select a Department" />
+    </div>
+
+    <div class="my-3">
+        <label for="designationId" class="form-label">Designation<small class="p-error">*</small></label>
+
+        <p-dropdown [options]="designations" formControlName="designationId" optionLabel="name" optionValue="id"
+            placeholder="Select a Designation" />
+    </div>
+
+    <!-- Submit -->
+    <div class="mt-4">
+        <div class="text-center">
+            <button class="btn btn-primary btn-rounded" [disabled]="!form.valid" (click)="submitForm()">Submit</button>
+        </div>
+    </div>
+    <!-- These field required for Local language (Not for English) - END -->
+</form>

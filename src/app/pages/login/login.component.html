@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="login-box">
+      <div>
+        <div class="logo-container">
+          <img src="https://picsum.photos/id/1/300/400" alt="BAPS Logo" class="logo" />
+        </div>
+        <h1 class="login-heading">Login</h1>
+        <form [formGroup]="loginForm" class="login-form">
+          <div>
+            <div class="input-container">
+              <label for="email1" class="label">Username</label>
+              <input id="email1" type="text" pInputText class="input-field" formControlName="user_name" />
+            </div>
+            <div class="input-container">
+              <label for="password1" class="label">Password</label>
+              <input id="password1" type="password" pInputText class="input-field" formControlName="password" />
+            </div>
+          </div>
+        </form>
+      </div>
+  
+      <div class="button-container">
+        <button (click)="onSubmit()" class="submit-button" type="button">
+          Submit
+        </button>
+        <div class="sign-up-text">
+        </div>
+      </div>
+    </div>
+  </div>

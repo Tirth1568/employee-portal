@@ -1,0 +1,19 @@
+.fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18.7px;
+    width: 43px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #29589c;
+    box-shadow: 0 5px 15px 0 grey;
+    cursor: pointer;
+    color: #fff;
+    z-index: 100;
+    margin-left: auto !important;
+}
+
+.fab-button:hover {
+    color: white;
+}
