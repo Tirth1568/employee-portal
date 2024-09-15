@@ -127,7 +127,7 @@ export class EmployeeListComponent implements OnInit {
           });
         } else {
           this.employeeService.add(formData).subscribe((json) => {
-            this.employees.a = [...this.employees.records, json]; // Assuming the API returns the created employee as `json`
+            this.employees.records = [...this.employees.records, json]; // Assuming the API returns the created employee as `json`
           });
         }
       }
