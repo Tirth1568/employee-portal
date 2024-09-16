@@ -69,9 +69,9 @@
       <td>{{ employee.firstName }}</td>
       <td>{{ employee.lastName }}</td>
       <td>{{ employee.email }}</td>
-      <td>{{ employee.department?.departmentName }}</td>
+      <td>{{ employee.departmentName }}</td>
       <td>{{ employee.age }}</td>
-      <td>{{ employee.designation?.designationName }}</td>
+      <td>{{ employee.designationName }}</td>
       <td><div class="my-2" >
         <p-tag pRipple value="Update"  icon="fa-solid fa-list-check" (click)="openAddForm(employee)"></p-tag>
         <p-tag pRipple value="Delete" severity="danger" icon="fa-solid fa-list-check" (click)="delete(employee.id)"></p-tag>
